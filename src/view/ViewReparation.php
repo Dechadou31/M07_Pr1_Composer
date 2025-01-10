@@ -1,5 +1,13 @@
 <?php
 namespace App\View;
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+if (isset($_POST['role'])) {
+    $_SESSION['role'] = $_POST['role'];
+}
 ?>
 <html>
 <body>
@@ -28,7 +36,7 @@ class ViewReparation {
 }
 ?>
 <?php 
-if (isset($_POST["role"]) && $_POST["role"] == "employee") {
+if (isset($_SESSION["role"]) && $_SESSION["role"] == "employee") {
 ?>
     <h2>Crear Nueva Reparación</h2>
     <form method="POST" action="../Controller/ControllerReparation.php">
