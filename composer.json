@@ -1,0 +1,20 @@
+{
+    "name": "marc/pr1composer",
+    "license": "mit",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dechadou31",
+            "email": "marc1331cram@gmail.com"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "^3.8",
+        "intervention/image": "^3.9",
+        "ramsey/uuid": "^4.7"
+    }
+}
